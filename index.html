@@ -894,9 +894,9 @@
       const rows  = parseCSV(text);
       // Row 0 = headers; data starts at row 1
       // Column B = index 1, Column F = index 5
-      const data = rows.slice(1).filter(r => r[5] && r[5].trim());
+      const data = rows.slice(1).filter(r => r[4] && r[4].trim());
       messages = data.map(r => ({
-        body:      (r[5] || '').trim(),
+        body:      (r[4] || '').trim(),
         signature: (r[1] || '').trim()
       }));
       sheetLoaded = true;
